@@ -1,0 +1,105 @@
+.PdfHighlighter{
+    background: #808080;
+    padding-top: 10px;
+}
+
+.navigator-and-document-wrapper{
+    display: flex; 
+    height: calc(100vh - 70px);
+}
+
+.pdf-loader-wrapper{
+    width: 75vw;
+    position: relative;
+}
+
+.dragging-file {
+    -moz-box-shadow: inset 0 0 50px #00cc00;
+    -webkit-box-shadow: inset 0 0 50px #00cc00;
+    box-shadow: inset 0 0 50px #00cc00;
+    color: #00cc00;
+    opacity: 0.6;
+    width: 100%;
+    height: calc(100vh - 70px);
+}
+
+.no-files {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(100% - 70px);
+    margin: auto; 
+    font-size: 26px;
+    font-weight: bold;
+    flex-direction: column; 
+    box-sizing: border-box; 
+    display: flex; 
+    place-content: center center; 
+    align-items: center;
+    left: 0;
+}
+
+.document-preview{
+    height: 180px;
+    border-radius: 4px;
+    background-color: #8c8c8c;
+    background-size: cover;
+    border: solid 1px #bfbfbf;
+    cursor: pointer;
+}
+
+.document-preview:not(:hover) .document-preview-opacity {
+    display: none;
+}
+
+.document-preview:hover .document-preview-opacity{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #8c8c8cAA;
+    font-size: 40px;
+    color: white;
+    line-height: 180px;
+}
+
+.file-lastmodified{
+    font-size: 16px;
+    line-height: 1.38;
+    letter-spacing: 0.4px;
+    color: #4f5564;
+}
+
+.file-name{
+    font-size: 16px;
+    line-height: 1.38;
+    letter-spacing: 0.4px;
+    color: #4f5564;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.delete-link{
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    color: #2e62a2 !important;
+    cursor: pointer;
+}
+
+.highlights-count {
+    font-size: 12px;
+    float: right;
+    background-color: #80808090;
+    padding: 3px;
+    border-radius: 3px;
+    color: white;
+}
+
+.document-preview:hover .highlights-count {
+    display: none;
+}
+
+.highlights-count i {
+    margin-right: 3px;
+}

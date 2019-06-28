@@ -1,0 +1,17 @@
+{
+  "short_name": "Safe Notes",
+  "name": "Safe Notes",
+  "description": "Take notes and add highlights. Simple & easy to use. Secure & Encrypted. Never Lose your Documents. Free.",
+  "icons": [
+    {
+      "src": "https://safenotes.co/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://safenotes.co/manifest.json",
+  "display": "standalone",
+  "theme_color": "#f5781d",
+  "background_color": "#262522"
+}
+

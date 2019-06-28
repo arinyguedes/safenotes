@@ -1,0 +1,83 @@
+.Landing{  
+  text-align: left;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.header{
+  background-color: #262522;
+  padding-bottom: 45px;
+}
+
+.head-text{
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.08;
+  letter-spacing: 1.5px;
+}
+
+.description-text{
+  font-size: 16px;
+  line-height: 1.38;
+  letter-spacing: 0.4px;
+  color: #cbcbcb;
+}
+
+.features{
+  margin-top: -45px;
+}
+
+.features-title{
+  font-size: 51px;
+}
+
+.feature-item{
+  text-align: center;
+  color: #4f5564;
+  padding: 0 40px 60px;
+}
+
+.feature-icon{
+  width: 90px;
+  height: 90px;
+  background-color: #2e62a2;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.feature-icon img{
+  max-width: 100%;
+}
+
+.feature-title{
+  font-size: 31px;
+  font-weight: bold;
+  line-height: 1.35;
+  letter-spacing: 0.78px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-description{
+  font-size: 16px;
+  line-height: 1.38;
+  letter-spacing: 0.4px;
+  margin-top: 15px;
+}
+
+.home-img img{
+  max-height: 430px;
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.footer-text{
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+  text-align: center;
+  color: #4f5564;
+}

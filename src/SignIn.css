@@ -1,0 +1,19 @@
+.signin-box {
+    box-shadow: 33px 42px 31px 0 rgba(95, 94, 95, 0.85);
+    background-color: #262522 !important;
+}
+
+.signin-logo {
+    margin-bottom: 40px;
+}
+
+.signin-btn {
+    font-size: 18px;
+}
+
+.what-is-blockstack {
+    color: white;
+    text-decoration: underline;
+    margin-top: 25px;
+    cursor: pointer;
+}
