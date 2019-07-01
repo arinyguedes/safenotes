@@ -81,7 +81,7 @@ class NavBar extends Component {
                   </Link>
                 </li>
               }
-              <button type="button" className="upload-file-btn btn-nav my-2" onClick={(e) => this.handleSelectClick(e)} disabled={this.state.savingFile || this.state.selectFile}>UPLOAD FILE</button>
+              <button type="button" className="upload-file-btn btn-nav my-2" onClick={(e) => this.handleSelectClick(e)} disabled={this.state.savingFile || this.state.selectFile}>UPLOAD PDF</button>
               <div className="nav-separator mx-lg-1"></div>
 
               {username &&

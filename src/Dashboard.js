@@ -287,7 +287,7 @@ class Dashboard extends Component {
               				<div className="col-12">
                 				<div className="section-title my-4">DASHBOARD</div>
 							</div>
-							{files.length === 0 ? mounted ? <div className="no-files">You didn't upload any file yet.</div> : <div className="no-files">Loading...</div>
+							{files.length === 0 ? mounted ? <div className="no-files">Drop your PDF file here to upload.</div> : <div className="no-files">Loading...</div>
 							:
 							files.map((file) => (
 								<div key={file.storageName} className="col-md-3 col-lg-2 col-sm-4 mb-4">
