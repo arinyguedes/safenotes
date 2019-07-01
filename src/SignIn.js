@@ -13,7 +13,7 @@ class SignIn extends Component {
 
   render() {
     if (this.props.userSession && (this.props.userSession.isUserSignedIn() || this.props.userSession.isSignInPending())) {
-      return (<Redirect to={`/dashboard`} />)
+      return (<Redirect to={`/myfiles`} />)
     }
     return (
       <div>

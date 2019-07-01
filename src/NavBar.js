@@ -65,15 +65,15 @@ class NavBar extends Component {
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav mr-auto ml-lg-2">
               {username && 
-                <li className={window.location.pathname.startsWith("/dashboard") ? "nav-item mx-lg-2 active" : "nav-item mx-lg-2"}>
-                  <Link className="nav-link link-nav clickable" to={`/dashboard`}>DASHBOARD</Link>
+                <li className={window.location.pathname.startsWith("/myfiles") ? "nav-item mx-lg-2 active" : "nav-item mx-lg-2"}>
+                  <Link className="nav-link link-nav clickable" to={`/myfiles`}>MY FILES</Link>
                 </li>
               }
             </ul>
             <ul className="navbar-nav">
               {username && 
                 <li className="nav-item">         
-                  <Link className="nav-link user-nav clickable" to={`/dashboard`}>   
+                  <Link className="nav-link user-nav clickable" to={`/myfiles`}>   
                     <div className="user-nav-wrap">
                       { userImage ? <img src={userImage} className="user-img-nav" alt={username} /> : <i className="fa fa-user-circle mr-1"></i> }
                       <span>{username}</span>

@@ -40,6 +40,10 @@
     left: 0;
 }
 
+.no-files i {
+    font-size: 60px;
+}
+
 .document-preview{
     height: 180px;
     border-radius: 4px;

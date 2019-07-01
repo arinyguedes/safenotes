@@ -14,7 +14,7 @@ class Landing extends Component {
 			this.props.history.push('/signin')
     }
     else{
-      this.props.history.push('/dashboard')
+      this.props.history.push('/myfiles')
     }
   }
 

@@ -245,7 +245,7 @@ class Dashboard extends Component {
 				this.setState({files: this.sortFiles(files), mounted: true}, () => 
 				{
 					if (window.location.search.indexOf("l=true") >= 0) {
-						this.props.history.push('/dashboard');
+						this.props.history.push('/myfiles');
 						this.loadFile(this.state.files[0])
 					}
 					this.loadFirstPages()
@@ -285,9 +285,12 @@ class Dashboard extends Component {
           			<div className="container">
 						<div className="row">
               				<div className="col-12">
-                				<div className="section-title my-4">DASHBOARD</div>
+                				<div className="section-title my-4">MY FILES</div>
 							</div>
-							{files.length === 0 ? mounted ? <div className="no-files">Drop your PDF file here to upload.</div> : <div className="no-files">Loading...</div>
+							{files.length === 0 ? mounted ? <div className="no-files">
+								<i className="fa fa-folder-open"></i>
+								<span>Drop your PDF file here to upload.</span>
+								</div> : <div className="no-files">Loading...</div>
 							:
 							files.map((file) => (
 								<div key={file.storageName} className="col-md-3 col-lg-2 col-sm-4 mb-4">

@@ -26,7 +26,7 @@ class App extends Component {
         if(!userData.username) {
           throw new Error('This app requires a username.')
         }
-        this.props.history.push('/dashboard')
+        this.props.history.push('/myfiles')
       })
     }
   }
@@ -34,7 +34,7 @@ class App extends Component {
   signIn(e) {
     e.preventDefault()
     var origin = window.location.origin
-    this.userSession.redirectToSignIn(origin + '/dashboard', origin + '/manifest.json', ['store_write', 'publish_data', 'email'])
+    this.userSession.redirectToSignIn(origin + '/myfiles', origin + '/manifest.json', ['store_write', 'publish_data', 'email'])
   }
 
   signOut(e) {
@@ -43,10 +43,10 @@ class App extends Component {
   }
 
   setFileResult(result) {
-    if (window.location.pathname.startsWith("/dashboard")) {
+    if (window.location.pathname.startsWith("/myfiles")) {
       this.setState({fileSaved: result, uploading: false})
     } else {
-      this.props.history.push('/dashboard?l=true')
+      this.props.history.push('/myfiles?l=true')
     }
   }
 
@@ -75,7 +75,7 @@ class App extends Component {
               signIn={this.signIn}/> }
           />
           <Route
-            path={`/dashboard`}
+            path={`/myfiles`}
             render={ routeProps => <Dashboard {...routeProps} 
               userSession={this.userSession} 
               fileSaved={this.state.fileSaved}
