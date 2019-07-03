@@ -56,7 +56,7 @@ class UploaderHandler extends Component {
             if (file) {
                 this.props.setUploading(true)
                 if (file.type === "application/pdf") {
-                    if (file.size < 2500000000) {
+                    if (file.size < 25000000) {
                         this.setState({fileSize: file.size, fileName: file.name, fileType: file.type, fileLastModified: file.lastModified})
                         var reader = new FileReader()
                         reader.onload = this.handleReaderLoaded.bind(this)
