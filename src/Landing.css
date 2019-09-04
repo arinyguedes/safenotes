@@ -81,3 +81,11 @@
   text-align: center;
   color: #4f5564;
 }
+
+.product-hunt {
+  width: 250px;
+  height: 54px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
