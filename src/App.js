@@ -34,7 +34,7 @@ class App extends Component {
   signIn(e) {
     e.preventDefault()
     var origin = window.location.origin
-    this.userSession.redirectToSignIn(origin + '/myfiles', origin + '/manifest.json', ['store_write', 'publish_data', 'email'])
+    this.userSession.redirectToSignIn(origin + '/myfiles', origin + '/manifest.json', ['store_write'])
   }
 
   signOut(e) {
