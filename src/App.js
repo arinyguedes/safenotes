@@ -1,7 +1,7 @@
 import './App.css'
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { UserSession } from 'blockstack'
+import { UserSession, isExpirationDateValid } from 'blockstack'
 import Landing from './Landing'
 import Dashboard from './Dashboard'
 import SignIn from './SignIn'
@@ -28,6 +28,8 @@ class App extends Component {
         }
         this.props.history.push('/myfiles')
       })
+    } else if (session.isUserSignedIn() && !isExpirationDateValid(session.loadUserData().authResponseToken)) {
+      this.signOut()
     }
   }
 
@@ -38,7 +40,9 @@ class App extends Component {
   }
 
   signOut(e) {
-    e.preventDefault()
+    if (e) {
+      e.preventDefault()
+    }
     this.userSession.signUserOut(window.location.origin)
   }
 

@@ -5,7 +5,7 @@ import {
     deleteFile
 } from 'blockstack'
 import { pdfjs } from 'react-pdf'
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
+pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.js`
 
 const metadataFilePrefix = "metadata__"
 const filePrefix = "file__"

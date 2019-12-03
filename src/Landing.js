@@ -95,7 +95,6 @@ class Landing extends Component {
             <div className="footer-text text-center mb-4">Safe Notes  •  2019</div>
         </div>
         </section>
-        <a rel="noopener noreferrer" href="https://www.producthunt.com/posts/safenotes?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-safenotes" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=160125&theme=light" alt="SafeNotes - Securely annotate and store your PDF documents | Product Hunt" width="250px" height="54px" className="product-hunt" /></a>
       </div>
     )
   }
