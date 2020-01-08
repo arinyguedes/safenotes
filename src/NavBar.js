@@ -16,10 +16,35 @@ class NavBar extends Component {
   
   componentDidMount() {
     if (this.props.userSession && this.props.userSession.isUserSignedIn()) {
-      lookupProfile(this.props.userSession.loadUserData().username).then((profile) => 
+      var username = this.props.userSession.loadUserData().username
+      lookupProfile(username).then((profile) => 
       {
-        var person = new Person(profile)
-        this.setState({ person: person })
+          if (profile) {
+              var person = new Person(profile);
+              var name = person.name();
+              var avatarUrl = person.avatarUrl();
+              if (avatarUrl) {
+                  fetch(avatarUrl).then((response) =>
+                  {
+                      response.arrayBuffer().then((buffer) =>
+                      {
+                        this.setState({ person: { username: username, name: name, avatarUrl: URL.createObjectURL(new Blob([new Uint8Array(buffer)], {type: "image"})) }})
+                      })
+                      .catch((err) =>
+                      {
+                          console.error(err)
+                          this.setState({ person: { username: username, name: name, avatarUrl: null }})
+                      })
+                  })
+                  .catch((err) =>
+                  {
+                      console.error(err)
+                      this.setState({ person: { username: username, name: name, avatarUrl: null }})
+                  })
+              } else {
+                this.setState({ person: { username: username, name: name, avatarUrl: null }})
+              }
+          }
       })
     }
   }
@@ -40,8 +65,8 @@ class NavBar extends Component {
     var username = null
     var userImage = null
     if (this.props.userSession && this.props.userSession.isUserSignedIn()) {
-      username = this.state.person && this.state.person.name() ? this.state.person.name() : this.props.userSession.loadUserData().username
-      userImage = this.state.person && this.state.person.avatarUrl()
+      username = this.state.person && this.state.person.name ? this.state.person.name : this.props.userSession.loadUserData().username
+      userImage = this.state.person && this.state.person.avatarUrl ? this.state.person.avatarUrl : null
     }
     return (
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
